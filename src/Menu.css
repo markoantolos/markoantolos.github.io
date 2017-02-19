@@ -1,0 +1,35 @@
+.Food-menu {
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 10px;
+  border-right: 2px solid #333;
+}
+.Food-menu h2 {
+
+}
+.Menu-list {
+  padding: 0;
+  list-style: none;
+}
+.Menu-item {
+  font-size: 1.3em;
+  padding: 7px 10px;
+  display: block;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.Menu-item a {
+  display: block;
+  color: #666;
+  text-decoration: none;
+}
+.Menu-item.active {
+  background: #fffb96;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+.Menu-item.active a {
+  color: #222;
+}
+.Menu-item:not(.active):hover { background: #feffd1; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.Menu-item:hover a { color: #000; }
