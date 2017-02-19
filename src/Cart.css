@@ -4,6 +4,19 @@
     border-left: 1px solid #e8e8e8;
 }
 
+.Cart table{
+    /*border: 1px solid #000;*/
+    table-layout: fixed;
+    width: 200px;
+}
+
+.Cart th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #eee;
+    width: 100px;
+}
+
 .Cart-row {
     width: 200px;
 }

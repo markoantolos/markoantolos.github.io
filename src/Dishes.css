@@ -19,4 +19,5 @@
 .Dish-info { display: inline-flex; flex-direction: column; margin-left: 12px; }
 .Dish-info h3 { margin: 0; }
 .Dish-info h3 span { font-size: 0.8em; font-weight: normal; margin-left: 20px; }
-.Dish-info button { width: 100px; height: 30px; }
+.Dish-info input { display: inline-block; width: 100px; height: 30px; }
+.Dish-info button { display: inline-block; width: 100px; height: 30px; }

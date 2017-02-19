@@ -24,9 +24,20 @@ class App extends Component {
     this.setState({category: category});
   }
 
-  orderDish(dish) {
+  orderDish(dish, qty=1) {
     var dishes = this.state.orderedDishes;
-    dishes.push(dish);
+    var exists = false;
+    for (let i = 0, len = dishes.length, d; i < len; i++) {
+      d = dishes[i];
+      if (d.name === dish.name) {
+        d.qty = qty;
+        exists = true;
+      }
+    }
+    if (!exists) {
+      dish.qty = qty;
+      dishes.push(dish);
+    }
     this.setState({orderedDishes: dishes});
   }
 

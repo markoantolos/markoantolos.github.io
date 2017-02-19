@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import './Dishes.css';
+import {formatPrices} from './helpers.js';
 
 const img = "https://dickeys.alohaorderonline.com/Content.ashx?ContentFile=Original_Westerner_100x80.jpg&companyCode=DICK001"
 
 
-function formatPrice(price) {
-  return '$' + price.toFixed(2);
-}
-
-function formatPrices(prices) {
-  return prices.map(formatPrice).join(' / ');
-}
 
 
 class DishesList extends Component {
@@ -37,6 +31,10 @@ class DishesList extends Component {
 }
 
 class DishItem extends Component {
+  //addToCart() {
+    //var qty = this.qty;
+  //}
+
   render() {
     var dish = this.props.dish;
     return (
@@ -47,7 +45,8 @@ class DishItem extends Component {
             {dish.name} <span className="Dish-prices">{ formatPrices(dish.prices) }</span>
           </h3>
           <p>{ dish.desc }</p>
-          <button onClick={ e => this.props.orderDish(dish) }>Add to Cart</button>
+          <input type="number" defaultValue="1" ref={(v) => this.qty = v} />
+          <button onClick={ e => this.props.orderDish(dish, this.qty.value) }>Add to Cart</button>
         </div>
       </li>
     );

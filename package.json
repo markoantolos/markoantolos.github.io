@@ -18,5 +18,5 @@
     "eject": "react-scripts eject",
     "deploy" : "npm run build&&gh-pages -d build"
   },
-  "homepage": "https://markoantolos.github.io/build"
+  "homepage": "https://markoantolos.github.io"
 }
